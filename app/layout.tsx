@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: "https://peruguitar.com",
   title: "Peru Guitar",
   description:
     "La primera comunidad de guitarristas en el Perú. Encuentra artículos, tutoriales y recursos para mejorar tu técnica y conocimiento de la guitarra.",
