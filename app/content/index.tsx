@@ -1,6 +1,8 @@
 import { Post, PostAuthor, PostCategory } from "./types";
-import { TwoWorldsBackingTrack } from "./posts/01-two-worlds-backing-track";
-import { AloneBackingTrack } from "./posts/02-alone-backing-track";
+
+import { TwoWorldsBackingTrack } from "./posts/resources/01-two-worlds-backing-track";
+import { AloneBackingTrack } from "./posts/resources/02-alone-backing-track";
+import { PentatonicFusionLick01 } from "./posts/guitar/01-pentatonic-fusion-lick";
 
 export const POSTS: Post[] = [
   {
@@ -8,9 +10,9 @@ export const POSTS: Post[] = [
     id: "two-worlds-backing-track",
     title: "Two Worlds Backing Track",
     description:
-      "Backing Track de primer tema instrumental grabado. Esta es la versión definitiva y es ideal para practicar frases técnicos como melódicos.",
+      "Versión definitiva de mi primer tema instrumental. Ideal para practicar fraseo técnico y melódico.",
     content: TwoWorldsBackingTrack,
-    date: new Date("2024-06-01"),
+    date: new Date("2026-02-11"),
     author: PostAuthor.ErpProject,
   },
   {
@@ -18,9 +20,19 @@ export const POSTS: Post[] = [
     id: "alone-backing-track",
     title: "Alone Backing Track",
     description:
-      "Backing Track del segundo tema instrumental que grabé. Un track melancólico y armónicamente rico, con pasajes que invitan a la introspección y un cierre de alta exigencia técnica.",
+      "Track melancólico de armonía rica. Combina pasajes introspectivos con un cierre de alta exigencia técnica.",
     content: AloneBackingTrack,
-    date: new Date("2024-06-01"),
+    date: new Date("2026-02-21"),
+    author: PostAuthor.ErpProject,
+  },
+  {
+    category: PostCategory.Guitar,
+    id: "pentatonic-fusion-lick-01",
+    title: "Pentatonic Fusion Lick 01",
+    description:
+      "Mezcla de pentatónica menor y escala mayor. Enfocado en desarrollar fraseo y lenguaje.",
+    content: PentatonicFusionLick01, // Nota: Aquí pusiste AloneBackingTrack de nuevo, ¿debería ser PentatonicLick01?
+    date: new Date("2026-02-21"),
     author: PostAuthor.ErpProject,
   },
 ].reverse();

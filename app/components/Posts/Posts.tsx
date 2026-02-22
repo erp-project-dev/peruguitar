@@ -36,7 +36,7 @@ export function Posts({ posts }: { posts: Post[] }) {
                 {post.title}
               </h3>
 
-              <p className="md:text-base leading-relaxed line-clamp-2 font-light max-w-2xl text-zinc-400 italic">
+              <p className="md:text-base leading-relaxed line-clamp-2 font-light text-zinc-400 italic">
                 {post.description}
               </p>
             </div>

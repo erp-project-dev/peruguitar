@@ -51,10 +51,10 @@ export const DownloadLinks = ({ files }: DownloadLinksProps) => {
   if (!files.length) return null;
 
   const handleDownload = (url: string) => {
-    const directUrl = mapGoogleDriveUrl(url); // Mapeo aplicado aquí
+    const directUrl = mapGoogleDriveUrl(url);
     const link = document.createElement("a");
     link.href = directUrl;
-    link.target = "_blank"; // Recomendado para evitar bloqueos de CORS en descargas externas
+    link.target = "_blank";
     link.setAttribute("download", "");
     link.style.display = "none";
     document.body.appendChild(link);
@@ -75,21 +75,30 @@ export const DownloadLinks = ({ files }: DownloadLinksProps) => {
                 {getIcon(file.extension)}
               </div>
 
-              <div>
-                <p className="font-semibold text-zinc-100 leading-tight">
+              {/* Bloque de texto ajustado */}
+              <div className="flex flex-col -space-y-0.5">
+                <div className="font-semibold text-zinc-100 text-sm sm:text-base">
                   {file.name}
-                </p>
-                <p className="text-[10px] text-zinc-500 uppercase tracking-widest mt-1 font-bold">
-                  {file.extension}{" "}
-                  {file.size && <span className="mx-1 text-zinc-700">•</span>}{" "}
-                  {file.size}
-                </p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[11px] font-bold text-purple-400 uppercase">
+                    {file.extension.replace(".", "")}
+                  </span>
+                  {file.size && (
+                    <>
+                      <span className="text-zinc-600 text-[10px]">•</span>
+                      <span className="text-[11px] font-medium text-zinc-400">
+                        {file.size}
+                      </span>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
 
             <button
               onClick={() => handleDownload(file.url)}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-white text-zinc-400 hover:text-black transition-all duration-300 text-sm font-bold border border-white/5 hover:border-white shadow-lg cursor-pointer"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-white text-zinc-400 hover:text-black transition-all duration-300 text-sm font-bold border border-white/5 hover:border-white shadow-lg cursor-pointer shrink-0"
             >
               <Download className="w-4 h-4" />
               <span className="hidden sm:inline">Descargar</span>

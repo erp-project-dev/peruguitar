@@ -1,4 +1,4 @@
-import { Headphones, FileText, Guitar } from "lucide-react";
+import { Headphones, FileText, Guitar, Link } from "lucide-react";
 import { SiInstagram, SiWhatsapp } from "@icons-pack/react-simple-icons";
 
 import { POSTS } from "@/content";
@@ -19,7 +19,7 @@ export interface MenuItem {
 
 export const MENU: MenuItem[] = [
   {
-    name: "Publicaciones",
+    name: "Guitarra",
     href: "/c/guitar",
     icon: <Guitar size={20} strokeWidth={1.5} />,
     position: "left",
@@ -65,7 +65,7 @@ export const MENU: MenuItem[] = [
     name: "ERP Project",
     href: "https://www.instagram.com/erpprojectofficial/",
     position: "right",
-    icon: <Guitar size={20} strokeWidth={1.5} />,
+    icon: <Link size={20} strokeWidth={1.5} />,
     enabled: true,
     external: true,
   },
