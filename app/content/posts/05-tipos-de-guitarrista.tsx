@@ -5,9 +5,9 @@ export const tiposDeGuitarrista: Post = {
   id: "tipos-de-guitarristas-y-rivalidades",
   title: "Tipos de guitarrista y rivalidades",
   description:
-    "Un análisis sincero (y quizás algo ácido) sobre los especímenes que habitamos el mundo de las seis cuerdas y las rivalidades que nos frenan.",
+    "Un análisis sincero (y quizás algo ácido) sobre los especímenes que habitamos el mundo de las seis cuerdas y las rivalidades que existen.",
   category: PostCategory.Reflections,
-  date: new Date("2026-02-21T00:00:01"),
+  date: new Date("2026-02-22T00:00:01"),
   author: PostAuthor.ErpProject,
   content: () => (
     <>

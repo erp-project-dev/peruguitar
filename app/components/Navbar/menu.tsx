@@ -4,7 +4,7 @@ import {
   Guitar,
   Link,
   Sparkles,
-  Info,
+  Users2Icon,
 } from "lucide-react";
 import { SiInstagram, SiWhatsapp } from "@icons-pack/react-simple-icons";
 
@@ -65,7 +65,7 @@ export const MENU: MenuItem[] = [
   {
     name: "Acerca de Nosotros",
     href: `/acerca-de-nosotros`,
-    icon: <Info size={20} strokeWidth={1.5} />,
+    icon: <Users2Icon size={20} strokeWidth={1.5} />,
     position: "left",
     enabled: true,
   },

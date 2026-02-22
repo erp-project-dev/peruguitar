@@ -1,9 +1,12 @@
 import Link from "next/link";
 
+import { POST_CATEGORIES } from "@/content/categories";
+import { PostCategory } from "@/content/types";
+
 interface RightBarItemProps {
   title: string;
   href?: string;
-  category?: string;
+  category?: PostCategory;
   color?: string;
 }
 
@@ -27,7 +30,7 @@ export function RightBarItem({
 
         {category && (
           <span className="text-[10px] italic text-white font-bold mt-1 uppercase tracking-wider opacity-90">
-            {category}
+            {POST_CATEGORIES[category].name}
           </span>
         )}
       </div>

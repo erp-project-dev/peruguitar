@@ -23,7 +23,7 @@ export default function AcercaDeNosotros() {
           <h2 className="text-xl font-semibold mb-2">Lo que hacemos</h2>
 
           <p className="mb-4">
-            Básicamente somos un <strong>blog</strong> y nos ayudamos de la
+            Básicamente somos un <strong>blog</strong> y nos ayudamos de la{" "}
             <strong>IA</strong> para mejorar el contenido de este y complementar
             la información que entregamos a nuestra comunidad.
           </p>
