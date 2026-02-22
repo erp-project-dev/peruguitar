@@ -1,18 +1,18 @@
 import Link from "next/link";
 
-interface ItemLinkProps {
+interface RightBarItemProps {
   title: string;
   href?: string;
   category?: string;
   color?: string;
 }
 
-export function ItemLink({
+export function RightBarItem({
   title,
   href = "#",
   category,
   color = "bg-zinc-500",
-}: ItemLinkProps) {
+}: RightBarItemProps) {
   return (
     <Link href={href} className="flex items-start gap-3 group py-1 w-full">
       <div

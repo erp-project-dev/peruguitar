@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { POSTS } from "@/content";
 import { PostHeader } from "./components/PostHeader";
 import { Metadata } from "next";
+import { TrackPostView } from "./components/TrackPostView";
 
 interface PageProps {
   params: Promise<{ postId: string }>;
@@ -55,6 +56,13 @@ export default async function Post({ params }: PageProps) {
       <div className="prose prose-invert max-w-none">
         <post.content />
       </div>
+
+      <TrackPostView
+        id={post.id}
+        title={post.title}
+        author={post.author}
+        category={post.category}
+      />
     </article>
   );
 }

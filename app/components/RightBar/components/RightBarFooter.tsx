@@ -1,4 +1,4 @@
-export function ItemFooter() {
+export function RightBarFooter() {
   const currentYear = new Date().getFullYear();
 
   return (

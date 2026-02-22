@@ -5,6 +5,7 @@ import "./globals.css";
 
 import { Navbar } from "./components/Navbar/Navbar";
 import { RightBar } from "./components/RightBar/RightBar";
+import GoogleAnalytics from "./components/googleAnalyticsInitializer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="dark">
+    <html lang="es">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-900 text-zinc-100`}
       >
@@ -70,6 +71,8 @@ export default function RootLayout({
             <RightBar />
           </aside>
         </div>
+
+        <GoogleAnalytics />
       </body>
     </html>
   );
