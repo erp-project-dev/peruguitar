@@ -1,5 +1,9 @@
 "use client";
-import React, { useMemo } from "react";
+
+import { useMemo } from "react";
+import { TabVisualizerHeader } from "./components/TabVisualizerHeader";
+import { TabVisualizerNote } from "./components/TabVisualizerNote";
+import { TabVisualizerChordName } from "./components/TabVisualizerChordName";
 
 interface TabVisualizerProps {
   notes: string[];
@@ -109,24 +113,26 @@ export const TabVisualizer = ({
 
     const timelineCols = timeline["e"].length;
     const systems = [];
+
     for (let i = 0; i < timelineCols; i += maxNotesPerLine) {
       const chunk: Record<
         string,
         { val: string; tech: string | null; chordName?: string | null }[]
       > = { e: [], B: [], G: [], D: [], A: [], E: [] };
+
       STRINGS.forEach(
         (s) => (chunk[s] = timeline[s].slice(i, i + maxNotesPerLine)),
       );
+
       systems.push(chunk);
     }
+
     return systems;
   }, [notes, maxNotesPerLine]);
 
   return (
     <div className="my-8 w-full border border-zinc-800 rounded-xl overflow-hidden">
-      <div className="px-6 py-4 bg-zinc-900 border-b border-zinc-800 flex items-center justify-between">
-        <div className="text-zinc-100 font-bold">{title}</div>
-      </div>
+      <TabVisualizerHeader title={title} />
 
       <div className="p-6 md:p-10 flex flex-col gap-10 bg-white overflow-x-auto overflow-y-hidden [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
         {allSystems.map((system, idx) => (
@@ -156,7 +162,7 @@ export const TabVisualizer = ({
                 key={s}
                 className="relative flex items-center h-6 shrink-0 w-full group"
               >
-                <div className="w-8 text-zinc-400 font-mono text-xs font-black shrink-0 uppercase select-none border-r border-zinc-100 mr-2">
+                <div className="w-8 text-zinc-400 font-mono text-xs font-black shrink-0 select-none border-r border-zinc-100 mr-2">
                   {s}
                 </div>
 
@@ -175,61 +181,11 @@ export const TabVisualizer = ({
                         className="flex justify-center items-center relative"
                       >
                         {s === "e" && item.chordName && (
-                          <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-zinc-700 px-2 py-0.5 border border-zinc-200 shadow-sm rounded-md text-[11px] font-bold text-zinc-100 tracking-wider whitespace-nowrap z-50">
-                            {item.chordName}
-                          </div>
+                          <TabVisualizerChordName chordName={s} />
                         )}
 
                         {item.val !== "-" ? (
-                          <div className="relative flex items-center justify-center font-mono text-sm font-black text-zinc-900 leading-none tabular-nums cursor-default z-20 w-full">
-                            <span className="bg-white px-1.5 relative z-20">
-                              {item.val}
-                            </span>
-
-                            {item.tech && (
-                              <span className="absolute left-1/2 top-1/2 -translate-y-1/2 w-full h-full z-30 pointer-events-none">
-                                {(item.tech === "h" || item.tech === "p") && (
-                                  <>
-                                    <span className="absolute -top-[14px] left-[50%] -translate-x-1/2 text-[9px] font-black text-violet-600 bg-white px-[2px] z-10 uppercase tracking-widest rounded-full leading-none">
-                                      {item.tech}
-                                    </span>
-                                    <svg
-                                      className="absolute -top-[2px] left-0 w-[100%] h-[12px] overflow-visible text-violet-500"
-                                      viewBox="0 0 100 12"
-                                      preserveAspectRatio="none"
-                                    >
-                                      <path
-                                        d="M 15 12 Q 50 -3 85 12"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="1.5"
-                                        vectorEffect="non-scaling-stroke"
-                                        strokeLinecap="round"
-                                      />
-                                    </svg>
-                                  </>
-                                )}
-                                {(item.tech === "/" || item.tech === "\\") && (
-                                  <svg
-                                    className="absolute top-1/2 -translate-y-1/2 left-0 w-[100%] h-[14px] overflow-visible text-blue-500"
-                                    viewBox="0 0 100 14"
-                                    preserveAspectRatio="none"
-                                  >
-                                    <line
-                                      x1="20"
-                                      y1={item.tech === "/" ? "14" : "0"}
-                                      x2="80"
-                                      y2={item.tech === "/" ? "0" : "14"}
-                                      stroke="currentColor"
-                                      strokeWidth="1.5"
-                                      vectorEffect="non-scaling-stroke"
-                                      strokeLinecap="round"
-                                    />
-                                  </svg>
-                                )}
-                              </span>
-                            )}
-                          </div>
+                          <TabVisualizerNote item={item} />
                         ) : (
                           <div className="h-6 w-6 invisible" />
                         )}
