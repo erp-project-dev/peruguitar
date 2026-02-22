@@ -53,7 +53,7 @@ export function Navbar({ isMobileView = false }: NavbarProps) {
     return (
       <div className="lg:hidden relative w-full h-16 border-b border-white/5 flex items-center justify-between px-6 z-50 bg-black">
         <Link href="/" onClick={() => setIsOpen(false)}>
-          <Image src={Logo} alt="Logo" height={28} className="w-auto" />
+          <Image src={Logo} alt="Peru Guitar" height={36} />
         </Link>
 
         <button onClick={toggleMenu} className="text-white p-2">

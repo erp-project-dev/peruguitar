@@ -3,19 +3,19 @@
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
 
-type TrackPostViewProps = {
+type PostTrackViewProps = {
   id: string;
   category: string;
   title: string;
   author: string;
 };
 
-export function TrackPostView({
+export function PostTrackView({
   id,
   category,
   title,
   author,
-}: TrackPostViewProps) {
+}: PostTrackViewProps) {
   useEffect(() => {
     ReactGA.event("post_view", {
       post_id: id,

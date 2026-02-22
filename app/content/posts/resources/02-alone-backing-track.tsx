@@ -1,5 +1,5 @@
-import { DownloadLinks } from "../components/DowloadLinks";
-import { YouTubePlayer } from "../components/YouTubePlayer";
+import { DownloadLinks } from "../../components/DowloadLinks";
+import { YouTubePlayer } from "../../components/YouTubePlayer";
 
 export function AloneBackingTrack() {
   return (

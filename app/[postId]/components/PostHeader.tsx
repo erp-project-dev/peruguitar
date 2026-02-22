@@ -50,7 +50,7 @@ export function PostHeader({
             <time className="text-zinc-300">{formattedDate}</time>
             <span className="h-1 w-1 rounded-full bg-zinc-500" />
             <span className="text-zinc-400">
-              Escrito por <span className="text-zinc-200">{author}</span>
+              Por <span className="text-zinc-200">{author}</span>
             </span>
           </div>
         </div>

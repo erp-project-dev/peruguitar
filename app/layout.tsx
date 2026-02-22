@@ -6,6 +6,7 @@ import "./globals.css";
 import { Navbar } from "./components/Navbar/Navbar";
 import { RightBar } from "./components/RightBar/RightBar";
 import GoogleAnalytics from "./components/googleAnalyticsInitializer";
+import { Footer } from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,6 +66,8 @@ export default function RootLayout({
             <div className="w-full max-w-4xl mx-auto px-6 py-12">
               {children}
             </div>
+
+            <Footer />
           </main>
 
           <aside className="w-80 border-l border-white/5 hidden xl:flex flex-col pt-12">

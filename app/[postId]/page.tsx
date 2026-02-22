@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import { POSTS } from "@/content";
 import { PostHeader } from "./components/PostHeader";
 import { Metadata } from "next";
-import { TrackPostView } from "./components/TrackPostView";
+import { PostTrackView } from "./components/PostTrackView";
+import Donations from "@/components/Donations/Donations";
 
 interface PageProps {
   params: Promise<{ postId: string }>;
@@ -57,12 +58,14 @@ export default async function Post({ params }: PageProps) {
         <post.content />
       </div>
 
-      <TrackPostView
+      <PostTrackView
         id={post.id}
         title={post.title}
         author={post.author}
         category={post.category}
       />
+
+      <Donations />
     </article>
   );
 }

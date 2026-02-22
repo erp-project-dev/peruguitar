@@ -3,6 +3,7 @@ import { Post, PostAuthor, PostCategory } from "./types";
 import { TwoWorldsBackingTrack } from "./posts/resources/01-two-worlds-backing-track";
 import { AloneBackingTrack } from "./posts/resources/02-alone-backing-track";
 import { PentatonicFusionLick01 } from "./posts/guitar/01-pentatonic-fusion-lick";
+import { PorQueNoMejoramosEnLaGuitarra } from "./posts/guitar/02-por-que-no-mejoramos-en-la-guitarra";
 
 export const POSTS: Post[] = [
   {
@@ -31,7 +32,17 @@ export const POSTS: Post[] = [
     title: "Pentatonic Fusion Lick 01",
     description:
       "Mezcla de pentatónica menor y escala mayor. Enfocado en desarrollar fraseo y lenguaje.",
-    content: PentatonicFusionLick01, // Nota: Aquí pusiste AloneBackingTrack de nuevo, ¿debería ser PentatonicLick01?
+    content: PentatonicFusionLick01,
+    date: new Date("2026-02-21"),
+    author: PostAuthor.ErpProject,
+  },
+  {
+    category: PostCategory.Guitar,
+    id: "por-que-no-mejoramos-en-la-guitarra",
+    title: "¿Por qué no mejoramos en la guitarra?",
+    description:
+      "Explicaremos porque a veces sentimos que no avanzamos o nos estancamos en la guitarra.",
+    content: PorQueNoMejoramosEnLaGuitarra,
     date: new Date("2026-02-21"),
     author: PostAuthor.ErpProject,
   },
