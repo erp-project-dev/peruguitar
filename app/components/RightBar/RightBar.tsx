@@ -17,7 +17,7 @@ export function RightBar() {
     return {
       others: getRandom(POSTS, 5),
       resources: getRandom(POSTS, 5, "resources"),
-      production: getRandom(POSTS, 5, "music-production"),
+      reflections: getRandom(POSTS, 5, "reflections"),
     };
   }, []);
 
@@ -48,24 +48,24 @@ export function RightBar() {
             </div>
           </section>
 
-          {/* <section>
+          <section>
             <RightBarHeader
-              title={CATEGORY_STYLES["music-production"].name}
-              color={CATEGORY_STYLES["music-production"].color}
-              bgColor={CATEGORY_STYLES["music-production"].bgColor}
+              title={CATEGORY_STYLES.reflections.name}
+              color={CATEGORY_STYLES.reflections.color}
+              bgColor={CATEGORY_STYLES.reflections.bgColor}
             />
             <div className="space-y-1">
-              {data.production.map((post) => (
+              {data.reflections.map((post) => (
                 <RightBarItem
                   key={post.id}
                   title={post.title}
                   href={`/${post.id}`}
                   category={post.category}
-                  color={CATEGORY_STYLES["music-production"].bgColor}
+                  color={CATEGORY_STYLES.reflections.bgColor}
                 />
               ))}
             </div>
-          </section> */}
+          </section>
 
           <section>
             <RightBarHeader

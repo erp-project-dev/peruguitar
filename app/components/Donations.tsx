@@ -25,7 +25,7 @@ export default function Donations() {
   };
 
   return (
-    <section className="mt-12 p-8 border border-zinc-800 rounded-3xl text-center">
+    <section className="p-8 border border-zinc-800 rounded-3xl text-center">
       <div className="mb-6">
         <span className="text-xs font-black uppercase tracking-[0.2em] text-zinc-500">
           Apoyo al Proyecto

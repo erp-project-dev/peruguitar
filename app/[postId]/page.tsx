@@ -3,7 +3,8 @@ import { POSTS } from "@/content";
 import { PostHeader } from "./components/PostHeader";
 import { Metadata } from "next";
 import { PostTrackView } from "./components/PostTrackView";
-import Donations from "@/components/Donations/Donations";
+import Donations from "@/components/Donations";
+import { SharePost } from "@/content/components/SharePost";
 
 interface PageProps {
   params: Promise<{ postId: string }>;
@@ -54,6 +55,8 @@ export default async function Post({ params }: PageProps) {
         author={post.author}
       />
 
+      <SharePost title={post.title} url={`https://peruguitar.com/${post.id}`} />
+
       <div className="prose prose-invert max-w-none">
         <post.content />
       </div>
@@ -64,6 +67,8 @@ export default async function Post({ params }: PageProps) {
         author={post.author}
         category={post.category}
       />
+
+      <SharePost title={post.title} url={`https://peruguitar.com/${post.id}`} />
 
       <Donations />
     </article>

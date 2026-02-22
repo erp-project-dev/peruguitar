@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import { TabVisualizer } from "../../components/TabVisualizer/TabVisualizer";
-import { YouTubePlayer } from "../../components/YouTubePlayer";
+import { TabVisualizer } from "../components/TabVisualizer/TabVisualizer";
+import { YouTubePlayer } from "../components/YouTubePlayer";
 
 export function PentatonicFusionLick01() {
   return (

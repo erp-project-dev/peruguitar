@@ -44,15 +44,27 @@ export function PorQueNoMejoramosEnLaGuitarra() {
         tus puntos ciegos; alguien con más experiencia sí.
       </p>
 
-      <h2>06. Ignorar la teoría</h2>
+      <h2>06. No transcribir (Sacar de oído)</h2>
       <p>
-        Puedes tener buen nivel técnico, pero sin teoría no sabrás cómo componer
-        ni hacia dónde dirigir tus ideas musicales. Tocar sin análisis te obliga
-        a repetir siempre lo mismo; <strong>no necesitas ser un experto</strong>
-        , pero ignorar la teoría es la vía rápida a la frustración constante.
+        Transcribir de oído es la única forma de ganar vocabulario real e
+        interiorizar el instrumento. Haz esta analogía:
+        <strong>
+          {" "}
+          todos podemos hablar, pero no todos tienen un buen léxico
+        </strong>
+        . En la música es igual; si no sacas música de oído, tu lenguaje siempre
+        será limitado y nunca lograrás esa riqueza que tienen los grandes.
       </p>
 
-      <h2>07. El peligro del ego inflado</h2>
+      <h2>07. Ignorar la teoría</h2>
+      <p>
+        Puedes tener buen nivel técnico, pero sin teoría no sabrás cómo componer
+        ni hacia dónde dirigir tus ideas musicales.{" "}
+        <strong>No necesitas ser un experto</strong>, pero ignorar la teoría es
+        la vía rápida a la frustración constante.
+      </p>
+
+      <h2>08. El peligro del ego inflado</h2>
       <p>
         <strong>Un lick bonito no te hace músico</strong>. Dominar una escala no
         te da el nivel que crees si fallas en lo básico. La maestría real nace

@@ -1,8 +1,9 @@
-import { Headphones, FileText, Guitar, Link } from "lucide-react";
+import { Headphones, FileText, Guitar, Link, Sparkles } from "lucide-react";
 import { SiInstagram, SiWhatsapp } from "@icons-pack/react-simple-icons";
 
 import { POSTS } from "@/content";
 import { CATEGORY_STYLES } from "@/shared/category";
+import { PostCategory } from "@/content/types";
 
 type MenuPosition = "left" | "right";
 
@@ -20,7 +21,7 @@ export interface MenuItem {
 export const MENU: MenuItem[] = [
   {
     name: "Guitarra",
-    href: "/c/guitar",
+    href: `/c/${PostCategory.Guitar}`,
     icon: <Guitar size={20} strokeWidth={1.5} />,
     position: "left",
     borderColor: CATEGORY_STYLES.guitar.bgColor,
@@ -28,8 +29,17 @@ export const MENU: MenuItem[] = [
     enabled: POSTS.some((post) => post.category === "guitar"),
   },
   {
+    name: "Reflexiones",
+    href: `/c/${PostCategory.Reflections}`,
+    icon: <Sparkles size={20} strokeWidth={1.5} />,
+    position: "left",
+    borderColor: CATEGORY_STYLES.reflections.bgColor,
+    iconColor: CATEGORY_STYLES.reflections.color,
+    enabled: POSTS.some((post) => post.category === "reflections"),
+  },
+  {
     name: "Producción Musical",
-    href: "/c/music-production",
+    href: `/c/${PostCategory.MusicProduction}`,
     icon: <Headphones size={20} strokeWidth={1.5} />,
     position: "left",
     borderColor: CATEGORY_STYLES["music-production"].bgColor,
@@ -38,7 +48,7 @@ export const MENU: MenuItem[] = [
   },
   {
     name: "Recursos",
-    href: "/c/resources",
+    href: `/c/${PostCategory.Resources}`,
     icon: <FileText size={20} strokeWidth={1.5} />,
     position: "left",
     borderColor: CATEGORY_STYLES.resources.bgColor,

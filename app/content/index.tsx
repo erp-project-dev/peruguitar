@@ -1,9 +1,9 @@
 import { Post, PostAuthor, PostCategory } from "./types";
 
-import { TwoWorldsBackingTrack } from "./posts/resources/01-two-worlds-backing-track";
-import { AloneBackingTrack } from "./posts/resources/02-alone-backing-track";
-import { PentatonicFusionLick01 } from "./posts/guitar/01-pentatonic-fusion-lick";
-import { PorQueNoMejoramosEnLaGuitarra } from "./posts/guitar/02-por-que-no-mejoramos-en-la-guitarra";
+import { PentatonicFusionLick01 } from "./posts/01-pentatonic-fusion-lick";
+import { PorQueNoMejoramosEnLaGuitarra } from "./posts/02-por-que-no-mejoramos-en-la-guitarra";
+import { AloneBackingTrack } from "./posts/03-alone-backing-track";
+import { TwoWorldsBackingTrack } from "./posts/04-two-worlds-backing-track";
 
 export const POSTS: Post[] = [
   {
@@ -37,13 +37,13 @@ export const POSTS: Post[] = [
     author: PostAuthor.ErpProject,
   },
   {
-    category: PostCategory.Guitar,
+    category: PostCategory.Reflections,
     id: "por-que-no-mejoramos-en-la-guitarra",
     title: "¿Por qué no mejoramos en la guitarra?",
     description:
       "Explicaremos porque a veces sentimos que no avanzamos o nos estancamos en la guitarra.",
     content: PorQueNoMejoramosEnLaGuitarra,
-    date: new Date("2026-02-21"),
+    date: new Date("2026-02-22"),
     author: PostAuthor.ErpProject,
   },
 ].reverse();

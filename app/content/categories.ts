@@ -13,6 +13,11 @@ export const POST_CATEGORIES: Record<
     description:
       "Conceptos fundamentales, armonía y análisis para entender la música.",
   },
+  reflections: {
+    name: "Reflexiones",
+    description:
+      "Pensamientos, mentalidad y experiencias personales sobre el camino de la guitarra eléctrica.",
+  },
   "music-production": {
     name: "Producción",
     description:
