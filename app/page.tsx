@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <section className="flex flex-col">
       <header className="border-b border-white/5 mb-8">
-        <h2 className="text-5xl font-extrabold text-white tracking-tighter leading-none">
+        <h1 className="text-5xl font-extrabold text-white tracking-tighter leading-none">
           Últimas{" "}
           <span className="text-zinc-400 font-medium">Publicaciones</span>
-        </h2>
+        </h1>
       </header>
 
       <div className="grid grid-cols-1 auto-rows-fr">

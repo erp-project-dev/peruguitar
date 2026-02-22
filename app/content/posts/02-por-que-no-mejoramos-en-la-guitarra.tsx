@@ -1,6 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
-export function PorQueNoMejoramosEnLaGuitarra() {
-  return (
+import { Post, PostAuthor, PostCategory } from "../types";
+
+export const porQueNoMejoramos: Post = {
+  id: "por-que-no-mejoramos-en-la-guitarra",
+  title: "¿Por qué no mejoramos en la guitarra?",
+  description:
+    "Un análisis crudo sobre los bloqueos y el estancamiento que frenan nuestro progreso.",
+  category: PostCategory.Reflections,
+  date: new Date("2026-02-22"),
+  author: PostAuthor.ErpProject,
+  content: () => (
     <>
       <p>
         Este es mi análisis de las veces que me he sentido estancado.{" "}
@@ -71,5 +80,5 @@ export function PorQueNoMejoramosEnLaGuitarra() {
         cuando sales de tu zona cómoda y admites que aún te falta mucho.
       </p>
     </>
-  );
-}
+  ),
+};

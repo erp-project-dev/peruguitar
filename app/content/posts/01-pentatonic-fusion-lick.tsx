@@ -1,9 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Post, PostAuthor, PostCategory } from "../types";
 import { TabVisualizer } from "../components/TabVisualizer/TabVisualizer";
 import { YouTubePlayer } from "../components/YouTubePlayer";
 
-export function PentatonicFusionLick01() {
-  return (
+export const pentatonicFusionLick01: Post = {
+  id: "pentatonic-fusion-lick-01",
+  title: "Pentatonic Fusion Lick 01",
+  description:
+    "Mezcla de pentatónica menor y escala mayor. Enfocado en desarrollar fraseo y lenguaje.",
+  category: PostCategory.Guitar,
+  date: new Date("2026-02-19T00:00:00"),
+  author: PostAuthor.ErpProject,
+  content: () => (
     <>
       <p>
         En esta nueva entrada veremos que las escalas que ya tenemos bajo los
@@ -97,12 +105,12 @@ export function PentatonicFusionLick01() {
       <h2>¿Qué te puedo recomendar?</h2>
 
       <p>
-        <strong>Analiza a fondo</strong> este patrón y ponte el reto de
+        <strong>Analiza a fondo</strong> este patrón y ponte el resto de
         resolverlo utilizando la <strong>segunda posición</strong> (o "caja") de
         la pentatónica de Bm. El concepto rítmico y armónico es exactamente el
         mismo, simplemente <strong>trasladas el bloque visualmente</strong> a lo
         largo del mástil y adaptas la digitación.
       </p>
     </>
-  );
-}
+  ),
+};

@@ -63,7 +63,7 @@ export default function RootLayout({
           <main className="flex-1 h-full overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             <Navbar isMobileView={true} />
 
-            <div className="w-full max-w-4xl mx-auto px-6 py-12">
+            <div className="w-full max-w-4xl mx-auto px-6 py-20">
               {children}
             </div>
 

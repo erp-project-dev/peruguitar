@@ -28,7 +28,7 @@ export function PostHeader({
     .replace(".", "");
 
   return (
-    <header className="pt-10">
+    <header>
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-6">
           <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.95]">

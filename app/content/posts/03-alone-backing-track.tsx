@@ -1,8 +1,17 @@
+/* eslint-disable react/no-unescaped-entities */
+import { Post, PostAuthor, PostCategory } from "../types";
 import { DownloadLinks } from "../components/DowloadLinks";
 import { YouTubePlayer } from "../components/YouTubePlayer";
 
-export function AloneBackingTrack() {
-  return (
+export const aloneBackingTrack: Post = {
+  id: "alone-backing-track",
+  title: "Alone Backing Track",
+  description:
+    "Track melancólico de armonía rica. Combina pasajes introspectivos con un cierre de alta exigencia técnica.",
+  category: PostCategory.Resources,
+  date: new Date("2026-02-20T00:00:00"),
+  author: PostAuthor.ErpProject,
+  content: () => (
     <>
       <p>
         Les comparto el backing track de <strong>Alone</strong>, un tema
@@ -44,5 +53,5 @@ export function AloneBackingTrack() {
         ]}
       />
     </>
-  );
-}
+  ),
+};

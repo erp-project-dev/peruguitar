@@ -39,9 +39,9 @@ export default async function CategoryPage({ params }: Props) {
   return (
     <section className="flex flex-col">
       <header className="border-b border-white/5 mb-8 pb-4">
-        <h2 className="text-5xl font-extrabold text-white tracking-tighter leading-none">
+        <h1 className="text-5xl font-extrabold text-white tracking-tighter leading-none">
           {category.name}
-        </h2>
+        </h1>
         <p className="text-lg text-zinc-400 leading-relaxed max-w-2xl font-medium">
           {category.description}
         </p>

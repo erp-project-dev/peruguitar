@@ -1,4 +1,11 @@
-import { Headphones, FileText, Guitar, Link, Sparkles } from "lucide-react";
+import {
+  Headphones,
+  FileText,
+  Guitar,
+  Link,
+  Sparkles,
+  Info,
+} from "lucide-react";
 import { SiInstagram, SiWhatsapp } from "@icons-pack/react-simple-icons";
 
 import { POSTS } from "@/content";
@@ -54,6 +61,13 @@ export const MENU: MenuItem[] = [
     borderColor: CATEGORY_STYLES.resources.bgColor,
     iconColor: CATEGORY_STYLES.resources.color,
     enabled: POSTS.some((post) => post.category === "resources"),
+  },
+  {
+    name: "Acerca de Nosotros",
+    href: `/acerca-de-nosotros`,
+    icon: <Info size={20} strokeWidth={1.5} />,
+    position: "left",
+    enabled: true,
   },
   {
     name: "WhatsApp",

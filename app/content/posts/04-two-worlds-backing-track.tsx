@@ -1,8 +1,17 @@
+/* eslint-disable react/no-unescaped-entities */
+import { Post, PostAuthor, PostCategory } from "../types";
 import { DownloadLinks } from "../components/DowloadLinks";
 import { YouTubePlayer } from "../components/YouTubePlayer";
 
-export function TwoWorldsBackingTrack() {
-  return (
+export const twoWorldsBackingTrack: Post = {
+  id: "two-worlds-backing-track",
+  title: "Two Worlds Backing Track",
+  description:
+    "Versión definitiva de mi primer tema instrumental. Ideal para practicar fraseo técnico y melódico.",
+  category: PostCategory.Resources,
+  date: new Date("2026-02-21T00:00:00"),
+  author: PostAuthor.ErpProject,
+  content: () => (
     <>
       <p>
         Les comparto el backing track de la <strong>versión definitiva</strong>{" "}
@@ -47,5 +56,5 @@ export function TwoWorldsBackingTrack() {
         ]}
       />
     </>
-  );
-}
+  ),
+};
