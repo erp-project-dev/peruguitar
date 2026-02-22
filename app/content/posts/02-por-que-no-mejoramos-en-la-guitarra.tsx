@@ -7,7 +7,7 @@ export const porQueNoMejoramos: Post = {
   description:
     "Un análisis crudo sobre los bloqueos y el estancamiento que frenan nuestro progreso.",
   category: PostCategory.Reflections,
-  date: new Date("2026-02-22"),
+  date: new Date("2026-02-22T00:00:00"),
   author: PostAuthor.ErpProject,
   content: () => (
     <>

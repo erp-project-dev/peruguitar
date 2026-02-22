@@ -7,7 +7,7 @@ export const tiposDeGuitarrista: Post = {
   description:
     "Un análisis sincero (y quizás algo ácido) sobre los especímenes que habitamos el mundo de las seis cuerdas y las rivalidades que nos frenan.",
   category: PostCategory.Reflections,
-  date: new Date(2026, 1, 22),
+  date: new Date("2026-02-21T00:00:01"),
   author: PostAuthor.ErpProject,
   content: () => (
     <>
