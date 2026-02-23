@@ -5,6 +5,7 @@ import { porQueNoMejoramos } from "./posts/02-por-que-no-mejoramos-en-la-guitarr
 import { aloneBackingTrack } from "./posts/03-alone-backing-track";
 import { twoWorldsBackingTrack } from "./posts/04-two-worlds-backing-track";
 import { tiposDeGuitarrista } from "./posts/05-tipos-de-guitarrista";
+import { conQuienEstudiarGuitarraEnPeru } from "./posts/06-con-quien-estudiar-guitarra-en-peru";
 
 export const POSTS: Post[] = [
   twoWorldsBackingTrack,
@@ -12,4 +13,5 @@ export const POSTS: Post[] = [
   pentatonicFusionLick01,
   porQueNoMejoramos,
   tiposDeGuitarrista,
+  conQuienEstudiarGuitarraEnPeru,
 ].sort((a, b) => b.date.getTime() - a.date.getTime());

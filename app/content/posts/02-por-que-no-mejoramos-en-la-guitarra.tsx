@@ -9,6 +9,7 @@ export const porQueNoMejoramos: Post = {
   category: PostCategory.Reflections,
   date: new Date("2026-02-22T00:00:00"),
   author: PostAuthor.ErpProject,
+
   content: () => (
     <>
       <p>

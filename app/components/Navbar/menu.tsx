@@ -11,6 +11,7 @@ import { SiInstagram, SiWhatsapp } from "@icons-pack/react-simple-icons";
 import { POSTS } from "@/content";
 import { CATEGORY_STYLES } from "@/shared/category";
 import { PostCategory } from "@/content/types";
+import { whatsAppUrl } from "@/settings.json";
 
 type MenuPosition = "left" | "right";
 
@@ -71,7 +72,7 @@ export const MENU: MenuItem[] = [
   },
   {
     name: "WhatsApp",
-    href: "https://chat.whatsapp.com/LpWKWA6NpCPCsblWRPdOSY?mode=gi_t",
+    href: whatsAppUrl,
     position: "right",
     icon: <SiWhatsapp size={18} fill="currentColor" />,
     enabled: true,

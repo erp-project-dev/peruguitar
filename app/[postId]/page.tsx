@@ -4,7 +4,7 @@ import { PostHeader } from "./components/PostHeader";
 import { Metadata } from "next";
 import { PostTrackView } from "./components/PostTrackView";
 import Donations from "@/components/Donations";
-import { SharePost } from "@/content/components/SharePost";
+import { SharePost } from "@/content/components/SharePost/SharePost";
 
 interface PageProps {
   params: Promise<{ postId: string }>;
