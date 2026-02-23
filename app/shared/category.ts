@@ -8,7 +8,7 @@ const CATEGORY_EXTENDED: Record<
   guitar: { color: "text-blue-400", bgColor: "bg-blue-500" },
   theory: { color: "text-amber-400", bgColor: "bg-amber-500" },
   reflections: { color: "text-rose-400", bgColor: "bg-rose-500" },
-  "music-production": { color: "text-purple-400", bgColor: "bg-purple-500" },
+  production: { color: "text-purple-400", bgColor: "bg-purple-500" },
   resources: { color: "text-emerald-400", bgColor: "bg-emerald-500" },
 };
 

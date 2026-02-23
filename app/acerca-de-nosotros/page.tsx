@@ -3,9 +3,8 @@ export default function AcercaDeNosotros() {
     <div className="min-h-screen text-white font-sans selection:bg-zinc-800 selection:text-zinc-200">
       <main className="max-w-3xl mx-auto px-6 py-24 md:py-40">
         <article className="flex flex-col gap-24">
-          {/* Header de alto impacto - Full Width vertical */}
           <header className="space-y-4">
-            <h1 className="text-7xl md:text-[120px] font-black tracking-tighter uppercase leading-[0.85]">
+            <h1 className="text-6xl sm:text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85]">
               Acerca de <br />
               <span className="text-zinc-700">Nosotros</span>
             </h1>

@@ -28,7 +28,7 @@ export interface MenuItem {
 
 export const MENU: MenuItem[] = [
   {
-    name: "Guitarra",
+    name: CATEGORY_STYLES.guitar.name,
     href: `/c/${PostCategory.Guitar}`,
     icon: <Guitar size={20} strokeWidth={1.5} />,
     position: "left",
@@ -37,7 +37,7 @@ export const MENU: MenuItem[] = [
     enabled: POSTS.some((post) => post.category === "guitar"),
   },
   {
-    name: "Reflexiones",
+    name: CATEGORY_STYLES.reflections.name,
     href: `/c/${PostCategory.Reflections}`,
     icon: <Sparkles size={20} strokeWidth={1.5} />,
     position: "left",
@@ -46,16 +46,16 @@ export const MENU: MenuItem[] = [
     enabled: POSTS.some((post) => post.category === "reflections"),
   },
   {
-    name: "Producción Musical",
-    href: `/c/${PostCategory.MusicProduction}`,
+    name: CATEGORY_STYLES.production.name,
+    href: `/c/${PostCategory.Production}`,
     icon: <Headphones size={20} strokeWidth={1.5} />,
     position: "left",
-    borderColor: CATEGORY_STYLES["music-production"].bgColor,
-    iconColor: CATEGORY_STYLES["music-production"].color,
-    enabled: POSTS.some((post) => post.category === "music-production"),
+    borderColor: CATEGORY_STYLES.production.bgColor,
+    iconColor: CATEGORY_STYLES.production.color,
+    enabled: POSTS.some((post) => post.category === "production"),
   },
   {
-    name: "Recursos",
+    name: CATEGORY_STYLES.resources.name,
     href: `/c/${PostCategory.Resources}`,
     icon: <FileText size={20} strokeWidth={1.5} />,
     position: "left",

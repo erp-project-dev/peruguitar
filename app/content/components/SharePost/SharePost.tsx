@@ -13,10 +13,10 @@ export function SharePost({ url, title }: SharePostProps) {
   const iconStyle = "w-5 h-5 transition-colors duration-200";
 
   return (
-    <section className="flex flex-col md:flex-row justify-between items-center gap-6 py-4 border-y border-zinc-800 my-8">
-      <div className="flex flex-col gap-3 items-center md:items-start">
+    <section className="flex flex-row justify-between items-center gap-6 py-4 border-y border-zinc-800 my-8">
+      <div className="flex flex-col gap-3 items-start">
         <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-[0.2em]">
-          Comparte este post
+          Comparte
         </span>
         <div className="flex gap-6">
           <a

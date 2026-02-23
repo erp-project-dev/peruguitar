@@ -18,7 +18,7 @@ export const POST_CATEGORIES: Record<
     description:
       "Pensamientos, mentalidad y experiencias personales sobre el camino de la guitarra eléctrica.",
   },
-  "music-production": {
+  production: {
     name: "Producción",
     description:
       "Tips de mezcla, mastering y herramientas de software musical.",

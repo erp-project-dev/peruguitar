@@ -4,7 +4,7 @@ export enum PostCategory {
   Guitar = "guitar",
   Theory = "theory",
   Reflections = "reflections",
-  MusicProduction = "music-production",
+  Production = "production",
   Resources = "resources",
 }
 

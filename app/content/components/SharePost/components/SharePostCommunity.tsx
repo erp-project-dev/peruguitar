@@ -12,9 +12,9 @@ export function SharePostCommunity() {
       >
         <div className="flex flex-col items-end">
           <span className="text-[10px] uppercase tracking-wider font-medium opacity-60">
-            Conoce más guitarristas
+            Únete a la
           </span>
-          <span className="text-sm font-bold">En la comunidad</span>
+          <span className="text-sm font-bold">Comunidad</span>
         </div>
         <SiWhatsapp className="w-5 h-5 text-[#25D366] group-hover:scale-110 transition-transform" />
       </a>
