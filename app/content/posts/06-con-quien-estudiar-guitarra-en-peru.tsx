@@ -82,9 +82,10 @@ export const conQuienEstudiarGuitarraEnPeru: Post = {
       <p>
         No pierdas el tiempo como yo, que recién a los 31 años me puse serio con
         el instrumento. Si vas a pagar por clases, <strong>estudia</strong>,{" "}
-        <strong>practica</strong> y deja la soberbia aún lado. No me arrepiento
-        de mi proceso, pero soy consciente de que si hubiera tenido este enfoque
-        desde el inicio, hoy mi nivel sería muy superior.
+        <strong>practica</strong> y <strong>deja la soberbia a un lado</strong>.
+        No me arrepiento de mi proceso, pero soy consciente de que si hubiera
+        tenido este enfoque desde el inicio,{" "}
+        <strong>hoy mi nivel sería muy superior</strong>.
       </p>
 
       <h3>Ojo con esto...</h3>
