@@ -22,16 +22,15 @@ export const conQuienEstudiarGuitarraEnPeru: Post = {
       <h3>Victor Hugo Glenny</h3>
       <p>
         Para mí, el que mejor plan de estudios tiene en el país. Su trayectoria
-        respalda un conocimiento teórico y práctico profundo.
+        respalda un conocimiento teórico y práctico profundo, pero esto conlleva
+        a una inversión fuerte y toma tiempo en{" "}
+        <strong>ver los resultados</strong>.
       </p>
+
       <p>
-        Su filosofía: el guitarrista debe aprender a <strong>sonar</strong>{" "}
-        antes que a solo <strong>ejecutar notas</strong>. Su método es riguroso
-        en técnica,
-        <i> fingerings</i>, postura y digitación. Es una inversión mayor y los
-        resultados son progresivos; él te da las herramientas para sonar
-        profesional, pero la especialización estilística (como el <i>legato</i>{" "}
-        de Brett Garsed) correrá por tu cuenta.
+        Por otro lado, el tocar como un guitarrista especifico, adquirir
+        lenguaje, va a depender completamente de tí. Él te da las herramientas,
+        pero como usarlas es tu camino a seguir.
       </p>
 
       <h3>Koko Rengifo</h3>
@@ -66,7 +65,7 @@ export const conQuienEstudiarGuitarraEnPeru: Post = {
       <h3>Wilmer Pachas</h3>
       <p>
         Su formación académica te da un enfoque a ser más músico que
-        guitarrista. Aunque solo tomé 2 clases con él, perdi el enfoque por que
+        guitarrista. Aunque solo tomé 2 clases con él, perdi el enfoque porque
         estaba más obsesionado en tocar licks que en entender la música.
       </p>
 
