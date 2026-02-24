@@ -7,6 +7,7 @@ import { twoWorldsBackingTrack } from "./posts/04-two-worlds-backing-track";
 import { tiposDeGuitarrista } from "./posts/05-tipos-de-guitarrista";
 import { conQuienEstudiarGuitarraEnPeru } from "./posts/06-con-quien-estudiar-guitarra-en-peru";
 import { recomendacionParaGrabarGuitarras } from "./posts/07-recomendación-para-grabar-guitarras";
+import { hazEstoCuandoNoSepasQuePracticar } from "./posts/08-haz-esto-cuando-no-sepas-que-practicar";
 
 export const POSTS: Post[] = [
   twoWorldsBackingTrack,
@@ -16,4 +17,5 @@ export const POSTS: Post[] = [
   tiposDeGuitarrista,
   conQuienEstudiarGuitarraEnPeru,
   recomendacionParaGrabarGuitarras,
+  hazEstoCuandoNoSepasQuePracticar,
 ].sort((a, b) => b.date.getTime() - a.date.getTime());

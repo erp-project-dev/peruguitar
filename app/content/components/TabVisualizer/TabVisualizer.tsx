@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useMemo } from "react";
@@ -9,7 +10,8 @@ interface TabVisualizerProps {
   notes: string[];
   title?: string;
   maxNotesPerLine?: number;
-  barlineEvery?: number | null;
+  maxNotesPerBar?: number | null;
+  maxVisibleLines?: number;
 }
 
 const STRINGS = ["e", "B", "G", "D", "A", "E"];
@@ -26,8 +28,11 @@ export const TabVisualizer = ({
   notes,
   title = "Lick",
   maxNotesPerLine = 12,
-  barlineEvery = 4,
+  maxNotesPerBar = 4,
+  maxVisibleLines = 4,
 }: TabVisualizerProps) => {
+  const LINE_HEIGHT = 215;
+
   const allSystems = useMemo(() => {
     const timeline: Record<
       string,
@@ -40,17 +45,14 @@ export const TabVisualizer = ({
         .split("\n")
         .forEach((line) => {
           const trimmed = line.trim();
-
           if (trimmed.startsWith("[") && trimmed.endsWith("]")) {
             let content = trimmed.slice(1, -1).trim();
             let cName = null;
-
             if (content.includes("|")) {
               const parts = content.split("|");
               content = parts[0].trim();
               cName = parts[1].trim();
             }
-
             STRINGS.forEach((s) =>
               timeline[s].push({
                 val: "-",
@@ -59,12 +61,10 @@ export const TabVisualizer = ({
               }),
             );
             const lastIdx = timeline["e"].length - 1;
-
             content.split(/\s+/).forEach((n) => {
               const [sNum, val] = n.split(".");
-              if (STRING_MAP[sNum]) {
+              if (STRING_MAP[sNum])
                 timeline[STRING_MAP[sNum]][lastIdx].val = val;
-              }
             });
           } else if (trimmed.includes(":")) {
             const [sNum, seq] = trimmed.split(":");
@@ -111,22 +111,21 @@ export const TabVisualizer = ({
         });
     });
 
-    const timelineCols = timeline["e"].length;
     const systems = [];
-
-    for (let i = 0; i < timelineCols; i += maxNotesPerLine) {
-      const chunk: Record<
-        string,
-        { val: string; tech: string | null; chordName?: string | null }[]
-      > = { e: [], B: [], G: [], D: [], A: [], E: [] };
-
+    for (let i = 0; i < timeline["e"].length; i += maxNotesPerLine) {
+      const chunk: Record<string, any[]> = {
+        e: [],
+        B: [],
+        G: [],
+        D: [],
+        A: [],
+        E: [],
+      };
       STRINGS.forEach(
         (s) => (chunk[s] = timeline[s].slice(i, i + maxNotesPerLine)),
       );
-
       systems.push(chunk);
     }
-
     return systems;
   }, [notes, maxNotesPerLine]);
 
@@ -134,7 +133,10 @@ export const TabVisualizer = ({
     <div className="my-8 w-full border border-zinc-800 rounded-xl overflow-hidden">
       <TabVisualizerHeader title={title} />
 
-      <div className="p-6 md:p-10 flex flex-col gap-10 bg-white overflow-x-auto overflow-y-hidden [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+      <div
+        className="p-6 md:p-10 flex flex-col gap-10 bg-white overflow-x-auto overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-200"
+        style={{ maxHeight: `${maxVisibleLines * LINE_HEIGHT}px` }}
+      >
         {allSystems.map((system, idx) => (
           <div
             key={idx}
@@ -148,8 +150,8 @@ export const TabVisualizer = ({
             >
               {system["e"].map((_, i) => (
                 <div key={i} className="relative flex justify-end">
-                  {barlineEvery !== null &&
-                    (i + 1) % barlineEvery === 0 &&
+                  {maxNotesPerBar !== null &&
+                    (i + 1) % maxNotesPerBar === 0 &&
                     i !== system["e"].length - 1 && (
                       <div className="h-full w-[2px] bg-zinc-200 absolute right-0" />
                     )}
@@ -165,10 +167,8 @@ export const TabVisualizer = ({
                 <div className="w-8 text-zinc-400 font-mono text-xs font-black shrink-0 select-none border-r border-zinc-100 mr-2">
                   {s}
                 </div>
-
                 <div className="relative flex-1 flex items-center h-full px-2">
                   <div className="absolute inset-x-0 h-[1.5px] bg-zinc-300 pointer-events-none" />
-
                   <div
                     className="relative z-10 grid w-full"
                     style={{
@@ -181,9 +181,8 @@ export const TabVisualizer = ({
                         className="flex justify-center items-center relative"
                       >
                         {s === "e" && item.chordName && (
-                          <TabVisualizerChordName chordName={s} />
+                          <TabVisualizerChordName chordName={item.chordName} />
                         )}
-
                         {item.val !== "-" ? (
                           <TabVisualizerNote item={item} />
                         ) : (
