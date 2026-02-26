@@ -8,6 +8,7 @@ import { tiposDeGuitarrista } from "./posts/05-tipos-de-guitarrista";
 import { conQuienEstudiarGuitarraEnPeru } from "./posts/06-con-quien-estudiar-guitarra-en-peru";
 import { recomendacionParaGrabarGuitarras } from "./posts/07-recomendación-para-grabar-guitarras";
 import { hazEstoCuandoNoSepasQuePracticar } from "./posts/08-haz-esto-cuando-no-sepas-que-practicar";
+import { porqQueComponemosMalosSolos } from "./posts/09-por-que-componemos-malos-solos";
 
 export const POSTS: Post[] = [
   twoWorldsBackingTrack,
@@ -18,4 +19,5 @@ export const POSTS: Post[] = [
   conQuienEstudiarGuitarraEnPeru,
   recomendacionParaGrabarGuitarras,
   hazEstoCuandoNoSepasQuePracticar,
+  porqQueComponemosMalosSolos,
 ].sort((a, b) => b.date.getTime() - a.date.getTime());
