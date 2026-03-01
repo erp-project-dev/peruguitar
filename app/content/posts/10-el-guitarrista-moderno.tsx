@@ -75,13 +75,24 @@ export const elProblemaDelGuitarristaModerno: Post = {
         hater o envidioso.
       </p>
 
-      <h2>Moraleja</h2>
+      <h2>Recomendaciones</h2>
       <p>
-        No busques rodearte de un grupo solo para recibir aceptación. De nada
-        sirve publicar un video para que todos te digan que eres el mejor. Busca
-        un entorno honesto, que te diga la verdad y que realmente te empuje a
-        mejorar.
+        No pretendo imponer nada, es solo mi opinión personal, pero aquí te dejo
+        dos reflexiones:
       </p>
+      <ol>
+        <li>
+          La técnica es bonita, pero debe ir en función del lenguaje musical
+          para que sientas un verdadero crecimiento como músico. El problema
+          surge cuando hay un desbalance.
+        </li>
+        <li>
+          No busques rodearte de un grupo solo para recibir aceptación. De nada
+          sirve publicar un video para que todos te digan que eres el mejor.
+          Busca un entorno honesto que te diga la verdad y que realmente te
+          empuje a mejorar.
+        </li>
+      </ol>
     </>
   ),
 };
