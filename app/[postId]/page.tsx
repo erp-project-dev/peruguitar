@@ -4,7 +4,8 @@ import { PostHeader } from "./components/PostHeader";
 import { Metadata } from "next";
 import { PostTrackView } from "./components/PostTrackView";
 import Donations from "@/components/Donations";
-import { SharePost } from "@/content/components/SharePost/SharePost";
+import { SharePost } from "./components/SharePost/SharePost";
+import WhatsAppModal from "./components/WhatsAppModal";
 
 interface PageProps {
   params: Promise<{ postId: string }>;
@@ -25,7 +26,7 @@ export async function generateMetadata({
   if (!post) return { title: "Post no encontrado" };
 
   return {
-    title: `${post.title} | Mi Blog`,
+    title: post.title,
     description: post.description,
     openGraph: {
       title: post.title,
@@ -47,6 +48,8 @@ export default async function Post({ params }: PageProps) {
 
   return (
     <article className="min-h-screen pb-20">
+      <WhatsAppModal />
+
       <PostHeader
         title={post.title}
         description={post.description}

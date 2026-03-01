@@ -34,7 +34,7 @@ export function PostHeader({
           <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.95]">
             {title}
           </h1>
-          <p className="text-xl md:text-2xl text-zinc-400 leading-snug max-w-3xl font-medium">
+          <p className="text-xl md:text-2xl text-zinc-400 leading-snug max-w-3xl">
             {description}
           </p>
         </div>

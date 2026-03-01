@@ -5,13 +5,18 @@ import {
   Link,
   Sparkles,
   Users2Icon,
+  VideoIcon,
 } from "lucide-react";
-import { SiInstagram, SiWhatsapp } from "@icons-pack/react-simple-icons";
+import {
+  SiInstagram,
+  SiWhatsapp,
+  SiYoutube,
+} from "@icons-pack/react-simple-icons";
 
 import { POSTS } from "@/content";
 import { CATEGORY_STYLES } from "@/shared/category";
 import { PostCategory } from "@/content/types";
-import { whatsAppUrl } from "@/settings.json";
+import { whatsAppUrl, youtubeUrl } from "@/settings.json";
 
 type MenuPosition = "left" | "right";
 
@@ -64,6 +69,13 @@ export const MENU: MenuItem[] = [
     enabled: POSTS.some((post) => post.category === "resources"),
   },
   {
+    name: "Media",
+    href: "/media",
+    icon: <VideoIcon size={20} strokeWidth={1.5} />,
+    position: "left",
+    enabled: true,
+  },
+  {
     name: "Acerca de Nosotros",
     href: `/acerca-de-nosotros`,
     icon: <Users2Icon size={20} strokeWidth={1.5} />,
@@ -83,6 +95,14 @@ export const MENU: MenuItem[] = [
     href: "https://instagram.com/peruguitar",
     position: "right",
     icon: <SiInstagram size={18} fill="currentColor" />,
+    enabled: true,
+    external: true,
+  },
+  {
+    name: "YouTube",
+    href: youtubeUrl,
+    position: "right",
+    icon: <SiYoutube size={18} fill="currentColor" />,
     enabled: true,
     external: true,
   },

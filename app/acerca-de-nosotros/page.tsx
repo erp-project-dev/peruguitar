@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Acerca de Nosotros",
+  description:
+    "La primera Comunidad de guitarristas en el Perú desde 2003. Un blog donde compartimos contenido, tips, licks y más.",
+};
+
 export default function AcercaDeNosotros() {
   return (
     <div className="min-h-screen text-white font-sans selection:bg-zinc-800 selection:text-zinc-200">
