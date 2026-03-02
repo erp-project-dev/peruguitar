@@ -1,8 +1,8 @@
 import { Post, PostAuthor, PostCategory } from "../types";
 
 export const porQuePeruNoTieneGuitarristasQueDenLaTallaMundial: Post = {
-  id: "el-problema-del-guitarrista-moderno",
-  title: "¿Por qué Perú no tiene guitarristas de talla mundial?",
+  id: "por-que-peru-no-tiene-guitarristas-de-talla-mundial",
+  title: "¿Por qué Perú no tiene guitarristas que den la talla mundial?",
   description:
     "Un análisis crudo sobre la industria, la formación y la falta de estándares en la escena de la guitarra eléctrica en Perú.",
   category: PostCategory.Reflections,
@@ -64,6 +64,18 @@ export const porQuePeruNoTieneGuitarristasQueDenLaTallaMundial: Post = {
         <strong>TikTok</strong> o <strong>Reels</strong>. El éxito mediático por
         timing es una herramienta válida, pero la excelencia musical que
         redefine el instrumento es otra muy distinta.
+      </p>
+      <p>
+        Mención aparte merecen figuras como <strong>Ramon Stagnaro</strong> o{" "}
+        <strong>Gerardo Manrique</strong>. Ellos son la prueba de que el talento
+        peruano puede sentarse en la misma mesa que los grandes del mundo, pero
+        con un denominador común: su éxito se consolidó fuera del país o en el
+        ámbito del sesionismo de élite. Asimismo, existe una camada de
+        guitarristas brillantes que, ante la falta de una escena técnica local,
+        han optado por la <strong>docencia</strong> o por géneros más
+        comerciales para subsistir, sacrificando su potencial de{" "}
+        <strong>guitar hero</strong>
+        por la estabilidad que el mercado peruano no les ofrece.
       </p>
 
       <h2>4. El centralismo: Lima no es el Perú</h2>
