@@ -10,6 +10,7 @@ import { recomendacionParaGrabarGuitarras } from "./posts/07-recomendación-para
 import { hazEstoCuandoNoSepasQuePracticar } from "./posts/08-haz-esto-cuando-no-sepas-que-practicar";
 import { porqQueComponemosMalosSolos } from "./posts/09-por-que-componemos-malos-solos";
 import { elProblemaDelGuitarristaModerno } from "./posts/10-el-guitarrista-moderno";
+import { porQuePeruNoTieneGuitarristasQueDenLaTallaMundial } from "./posts/11-por-que-peru-no-tiene-guitarristas-que-den-la-talla-mundial";
 
 export const POSTS: Post[] = [
   twoWorldsBackingTrack,
@@ -22,4 +23,5 @@ export const POSTS: Post[] = [
   hazEstoCuandoNoSepasQuePracticar,
   porqQueComponemosMalosSolos,
   elProblemaDelGuitarristaModerno,
+  porQuePeruNoTieneGuitarristasQueDenLaTallaMundial,
 ].sort((a, b) => b.date.getTime() - a.date.getTime());
