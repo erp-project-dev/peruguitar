@@ -74,8 +74,8 @@ export const porQuePeruNoTieneGuitarristasQueDenLaTallaMundial: Post = {
         guitarristas brillantes que, ante la falta de una escena técnica local,
         han optado por la <strong>docencia</strong> o por géneros más
         comerciales para subsistir, sacrificando su potencial de{" "}
-        <strong>guitar hero</strong>
-        por la estabilidad que el mercado peruano no les ofrece.
+        <strong>guitar hero</strong> por la estabilidad que el mercado peruano
+        no les ofrece.
       </p>
 
       <h2>4. El centralismo: Lima no es el Perú</h2>
