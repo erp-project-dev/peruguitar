@@ -39,7 +39,7 @@ const WhatsAppModal = () => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
       <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-sm w-full border-t-8 border-green-500 transform transition-all">
         <h3 className="text-2xl font-bold text-gray-800 mb-2 text-center">
-          Únete al grupo del blog
+          Únete al grupo del WhatsApp
         </h3>
         <p className="text-gray-600 mb-6 text-center text-sm">
           Aquí te enterarás siempre cuando lancemos una publicación,{" "}
