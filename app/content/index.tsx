@@ -12,6 +12,7 @@ import { porqQueComponemosMalosSolos } from "./posts/09-por-que-componemos-malos
 import { elProblemaDelGuitarristaModerno } from "./posts/10-el-guitarrista-moderno";
 import { porQuePeruNoTieneGuitarristasQueDenLaTallaMundial } from "./posts/11-por-que-peru-no-tiene-guitarristas-que-den-la-talla-mundial copy";
 import { comoTocarFraseosOutsideYQueSuenenBien } from "./posts/12-como-tocar-fraseos-outside";
+import { comoComponerUsandoIA } from "./posts/13-como-componer-con-usando-ia";
 
 export const POSTS: Post[] = [
   twoWorldsBackingTrack,
@@ -26,4 +27,5 @@ export const POSTS: Post[] = [
   elProblemaDelGuitarristaModerno,
   porQuePeruNoTieneGuitarristasQueDenLaTallaMundial,
   comoTocarFraseosOutsideYQueSuenenBien,
+  comoComponerUsandoIA,
 ].sort((a, b) => b.date.getTime() - a.date.getTime());
