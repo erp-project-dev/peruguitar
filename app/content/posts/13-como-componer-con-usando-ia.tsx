@@ -126,6 +126,13 @@ export const comoComponerUsandoIA: Post = {
         la mitad de tiempo.
       </p>
 
+      <p>
+        Seamos realistas: esto es solo <strong>pre-producción</strong>. Lograr
+        un sonido <strong>profesional</strong> depende totalmente de la calidad
+        de tus tomas, la mezcla, mastering y tu criterio técnico. El trabajo
+        duro empieza ahora.
+      </p>
+
       <h2>Comparativa de Audio</h2>
 
       <p>
