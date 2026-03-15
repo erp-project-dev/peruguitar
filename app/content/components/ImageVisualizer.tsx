@@ -13,16 +13,12 @@ export const ImageVisualizer: React.FC<ImageVisualizerProps> = ({
   caption,
 }) => {
   return (
-    <figure className="w-full my-10 flex justify-center">
-      <div className="max-w-fit bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden shadow-md">
-        <img
-          src={src}
-          alt={alt}
-          className="max-w-full h-auto block rounded-t-xl  dark:border-zinc-800 mt-0 mb-0 m-auto"
-        />
+    <figure className="flex justify-center w-full my-10">
+      <div className="max-w-fit overflow-hidden border border-zinc-800 bg-zinc-900 rounded-xl shadow-xl">
+        <img src={src} alt={alt} className="block w-full h-auto max-w-full" />
 
         {caption && (
-          <figcaption className="border-t border-zinc-800 px-4 py-3 dark:bg-zinc-900 text-xs text-zinc-500 dark:text-zinc-400 text-center mt-0">
+          <figcaption className="px-4 py-2.5 border-t border-zinc-800 text-center text-[11px] uppercase tracking-wider font-medium text-zinc-400">
             {caption}
           </figcaption>
         )}
